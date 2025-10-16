@@ -2,18 +2,18 @@ namespace FactoryPatternExercise2;
 
 public static class DataAccessFactory
 {
-    public static IDataAcess GetDataAccess(string databaseType)
+    public static IDataAccess GetDataAccess(string databaseType)
     {
         switch (databaseType.ToLower())
         {
             case "list":
                return new ListDataAccess();
             case "sql":
-                return new SQLDataAccess();
+                return new SqlDataAccess();
             case "mongo":
                 return new MongoDataAccess();
             default:
-                return new ListDataAccess();
+                throw new ArgumentException("Invalid database type");
         }
     }
 }

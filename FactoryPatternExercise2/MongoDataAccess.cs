@@ -1,6 +1,6 @@
 namespace FactoryPatternExercise2;
 
-public class MongoDataAccess : IDataAcess
+public class MongoDataAccess : IDataAccess
 {
     public List<Product> LoadData()
     {

@@ -1,6 +1,6 @@
 namespace FactoryPatternExercise2;
 
-public class SQLDataAccess : IDataAcess
+public class SqlDataAccess : IDataAccess
 {
     public List<Product> LoadData()
     {

@@ -2,13 +2,19 @@ namespace FactoryPatternExercise2;
 
 public class ListDataAccess : IDataAcess
 {
-    public void LoadData()
+    public List<Product> LoadData()
     {
-        Console.WriteLine("I am reading data from SQL Database...");
+        Console.WriteLine("Reading data from List...");
+
+        return new List<Product>
+        {
+            new Product { Name = "apple", Price = 10.00 },
+            new Product { Name = "banana", Price = 20.00 },
+        };
     }
 
     public void SaveData()
     {
-        Console.WriteLine("I am saving data to SQL Database...");
+        Console.WriteLine("Saving data to List...");
     }
 }
